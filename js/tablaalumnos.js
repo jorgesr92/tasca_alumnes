@@ -1,10 +1,11 @@
 function verificardni () {
     var DNI= document.getElementById("DNIalu").value;
-    var numDNI=parseInt((DNI.substing(0,7)));
+    var DNI1=DNI.substring(0,8);
+    var numDNI=parseInt(DNI1);
     var letra = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
     //con el final el array no se puede modificar 
     var i=(numDNI%23);
-    return DNI.substring(0,7)+letra[i];
+    return DNI.substring(0,8)+letra[i];
 }
 function error() {
     var DNI= document.getElementById("DNIalu").value;
@@ -23,7 +24,7 @@ function agregarlumno() {
     var correoalu= document.getElementById("CORREOalu").value;
     var Notaalu= document.getElementById("NOTAalu").value;
     if (error()) {
-        document.getElementById("resultat").innerHTML = "todo good "+DNI+Nomalu+Apealu+correoalu+Notaalu;
+        document.getElementById("resultat").innerHTML = "<tr> <td>"+DNI+"</td>  <td>"+NomAlu+"</td> <td>"+Apealu+"</td> <td>"+correoalu+"</td><td>"+Notaalu+"</td></tr>";
         //<table class='table table-striped'><tr> <td>"+DNI+"</td>  <td>"+NomAlu+"</td> <td>"+Apealu+"</td> <td>"+correoalu+"</td><td>"+Notaalu+"</td></tr></table>
     }
     return false

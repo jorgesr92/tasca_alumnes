@@ -14,7 +14,7 @@
             <div class="card-deck">
                 <div class="card">
                     <div class="card-body" align="center">
-                        <form action="index.html" oninput="return error()">
+                        <form action="index.html" onsubmit="return agregarlumno()">
                             <div id="formularioT"> <h1>Lista de alumnos</h1> </div>                   
                             <div id="inicio"> <p>DNI del alumno: <br> <input type="text" required="required" id="DNIalu"></p> </div>
                             <div id="nomALU"> <p>Nombre del alumno: <br> <input type="text" required="required" id="NOMalu"></p> </div>
@@ -32,8 +32,8 @@
                         <div style="text-align:center;">
                         <img class="card-img-bottom" src="img/3.jpg" alt="Card image cap">
                         </div>
-                        <div id="resultat" style="text-align:center">
-                        <!--<table class="table table-striped">
+                        <div style="text-align:center">
+                        <table class="table table-striped">
                             <tr> 
                                 <th> 
                                     <p>DNI</p>
@@ -51,9 +51,10 @@
                                     <p>Nota</p>
                                 </th>
                             </tr>
+                            <tr id="resultat"></tr>
                             
                                    
-                                </table>    -->
+                                </table>    
                         </div>
                     
                     </div>

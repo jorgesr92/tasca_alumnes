@@ -18,6 +18,7 @@ function error() {
     }
 }
 function agregarlumno() {
+    
     var DNI= document.getElementById("DNIalu").value;
     var NomAlu= document.getElementById("NOMalu").value;
     var Apealu= document.getElementById("APEalu").value;

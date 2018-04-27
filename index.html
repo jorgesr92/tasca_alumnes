@@ -13,29 +13,49 @@
     </head>
     <body>
         <div class="container"> <!-- Formulario -->
-            <div class="card-deck">
+
+            
                 <div class="card">
                     <div class="card-body" align="center">
                         <form action="index.html" onsubmit="return agregarlumno()">
                             <div id="formularioT"> <h1>Lista de alumnos</h1> </div>                   
-                            <div id="inicio"> <p>DNI del alumno: <br> <input type="text" required="required" id="DNIalu"></p> </div>
-                            <div id="nomALU"> <p>Nombre del alumno: <br> <input type="text" required="required" id="NOMalu"></p> </div>
-                            <div id="apeALU"> <p>Apellidos del alumno: <br> <input type="text" required="required" id="APEalu"></p> </div>
-                            <div id="correoALU"> <p>Correo del alumno: <br> <input type="email" required="required" id="CORREOalu"></p> </div>
-                            <div id="nota"> <p>Nota del alumno: <br> <input type="number" required="required" value=0 min="0" step=1 id="NOTAalu"></p></div>
+                            <div class="row">
+
+                            <div class="col">
+                                <input type="text" class="form-control" id="DNIalu" required="required" placeholder="Introducir DNI">
+                            </div>
+                            
+                                <div class="col">
+                                  <input type="text" required="required" id="NOMalu" class="form-control" placeholder="Nombre del alumno">
+                                </div>
+                                <div class="col">
+                                  <input type="text" required="required" id="APEalu" class="form-control" placeholder="Apellidos del alumno">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                            <div class="col">
+                                <input type="email" class="form-control" id="CORREOalu" required="required"  placeholder="Introducir email">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" id="NOTAalu" required="required" value=0 min="0" step=1 placeholder="Introducir nota">
+                            </div>
+                            </div>
+                            <br>
                             <div class="container">
                                 <div style="text-align:center;"><input class="btn btn-default btn-lg active" type="submit" value="Añadir"></div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div  class="card">
+                <br>
+                <div  class="card">  <!-- Tabla -->
                     <div class="card-body">
                         <div style="text-align:center;">
                         <img class="card-img-bottom" src="img/3.jpg" alt="Card image cap">
                         </div>
                         <div style="text-align:center">
-                        <table class="table table-striped">
+                        <table class="table table-striped" id="resultat">
                             <tr> 
                                 <th> 
                                     <p>DNI</p>
@@ -52,8 +72,10 @@
                                 <th> 
                                     <p>Nota</p>
                                 </th>
+                                <th> 
+                                    <div><input class="borrar btn btn-danger btn-xs" type='button' id=borrar value='Borrar tabla'></div> 
+                                </th>
                             </tr>
-                            <tr id="resultat"></tr>
                             
                                    
                                 </table>    
@@ -61,8 +83,9 @@
                     
                     </div>
                 </div>
-            </div>
+           
         </div>
+
         
 </body>
 </html>
